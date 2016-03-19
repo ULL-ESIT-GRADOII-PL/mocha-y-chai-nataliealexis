@@ -4,6 +4,9 @@ var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var clean = require('gulp-clean');
 
+gulp.task('default', ['minify-js', 'minify-css', 'minify-html'], function() {
+});
+
 gulp.task('minify-js', function() {
   gulp.src(['vendor/*.js', '*.js', 'assets/js/*.js'])
     .pipe(minify({
